@@ -1,5 +1,7 @@
 package com.example.app_github.ui.main
 
+import android.arch.lifecycle.ViewModelProviders
+import android.databinding.DataBindingUtil
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import com.example.app_github.R
@@ -28,7 +30,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun getIssue() {
-        Connecter.createApi().getIssue("open", "comments", "asc").enqueue(object : Callback<List<IssueModel>> {
+        Connecter.createApi().getIssue("open", "comments", "desc").enqueue(object : Callback<List<IssueModel>> {
             override fun onResponse(call: Call<List<IssueModel>>, response: Response<List<IssueModel>>) {
                 val mainModel = arrayListOf<MainModel>()
                 response.body()?.take(10)?.forEach {

@@ -39,7 +39,7 @@ class MainAdapter(val mainModel: ArrayList<MainModel>, val onClick: onClick) :
         fun bind(mainModel: MainModel) {
             textTitle.text = mainModel.textTitle
             textUser.text = mainModel.textUser
-            textDate.text = mainModel.textDate.substring(0, 10)
+            textDate.text = mainModel.textDate.substring(0, 14)
             textComment.text = mainModel.textComment.toString()
         }
     }

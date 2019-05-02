@@ -5,12 +5,11 @@ import com.google.gson.annotations.Expose
 import com.google.gson.annotations.SerializedName
 
 data class IssueModel(
-
     @SerializedName("title")
     val title: String,
     @SerializedName("user")
     val user: UserModel,
-    @SerializedName("comment")
+    @SerializedName("comments")
     val comments: Int,
     @SerializedName("created_at")
     val createdAt: String,

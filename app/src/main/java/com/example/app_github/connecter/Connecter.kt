@@ -6,8 +6,8 @@ import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
 object Connecter {
-    lateinit var retrofit: Retrofit
-    lateinit var api: API
+    var retrofit: Retrofit
+    var api: API
 
     init {
         val interceptor = HttpLoggingInterceptor()
